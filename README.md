@@ -14,4 +14,4 @@ Welcome to my portfolio! Here, I proudly display my skills, projects, achievemen
 
 ## Production Link
 
-You can view the live version of this portfolio [here](https://portfolio-sumit.netlify.app/).
+You can view the live version of this portfolio [here](https://portfolio-sumit-khandelwal.netlify.app/).

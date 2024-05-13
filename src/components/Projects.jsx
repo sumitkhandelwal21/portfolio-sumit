@@ -9,7 +9,7 @@ import quizMob from '../assets/projects/quiz-mob.jpeg';
 const Projects = () => {
 
   const projs = [
-    {id: 1, src1: port, src2: portMob, web_link:'https://portfolio-sumit.netlify.app/', github_link:'https://github.com/sumitkhandelwal21/portfolio-sumit'},
+    {id: 1, src1: port, src2: portMob, web_link:'https://portfolio-sumit-khandelwal.netlify.app/', github_link:'https://github.com/sumitkhandelwal21/portfolio-sumit'},
     {id: 2, src1: teevra, src2: teevraMob, web_link:'https://teevra-news.netlify.app/', github_link:'https://github.com/sumitkhandelwal21/teevra-news'},
     {id: 3, src1: quiz, src2: quizMob, web_link:'https://quiz-performance-app.netlify.app/', github_link:'https://github.com/sumitkhandelwal21/quiz-app'}
   ];
