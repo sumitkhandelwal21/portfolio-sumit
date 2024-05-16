@@ -4,11 +4,11 @@ import { FiDownload } from "react-icons/fi";
 
 const Home = () => {
   return (
-    <div name="home" className='h-screen w-full bg-gradient-to-b
+    <div name="home" className='h-fit md:h-screen w-full bg-gradient-to-b
         from-black via-black to-gray-800 pb-12 md:pb-0'>
       <div className='max-w-screen-lg mx-auto flex flex-col
          items-center justify-center h-full px-4 md:flex-row'>
-        <div className='flex flex-col justify-center h-full mt-72 md:mt-8'>
+        <div className='flex flex-col justify-center h-full mt-24 md:mt-8'>
           <p className='text-4xl font-hello text-blue-500 mb-2'>Hello !!!</p>
           <p className='text-4xl sm:text-7xl font-namefont text-white'>I'm Sumit Khandelwal</p>
           <p className='bg-blue-500 text-black w-fit py-1 px-6 mt-6 font-hello text-2xl font-extrabold hover:scale-110 duration-200'>Full Stack Developer</p>
