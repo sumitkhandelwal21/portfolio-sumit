@@ -15,7 +15,7 @@ const Experience = () => {
             </div>
             <div className='px-2 sm:px-0'>
             <div className='flex flex-col md:flex-row p-6 w-full shadow-md shadow-gray-500 rounded-lg h-fit md:hover:scale-105 md:duration-500'>
-                <div className={`h-auto w-full md:w-3/4 rounded-t-lg text-${theme.palette.text.primary} md:rounded-tr-none md:rounded-bl-lg bg-${theme.palette.mode === 'dark' ? 'black' : 'gray-200'} flex flex-col justify-center items-center p-4`}>
+                <div className={`h-auto w-full md:w-3/4 rounded-t-lg text-${theme.palette.text.primary} md:rounded-tr-none md:rounded-bl-lg flex flex-col justify-center items-center p-4`} style={{backgroundColor: `${theme.palette.navbg}`}}>
                     <img src={InfoIcon} alt="" className='rounded-md duration-200 hover:scale-105 h-24 mb-4'/>
                     <p className='text-1xl font-bold'>InfoObjects Inc. | Software Engineer</p>
                     <p className='text-1xl'>Jan 2023 – Present | Jaipur, Rajasthan</p>

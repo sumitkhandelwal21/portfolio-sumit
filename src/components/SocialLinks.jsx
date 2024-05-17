@@ -61,7 +61,7 @@ const SocialLinks = () => {
   ];
   return (
     <>
-    <div className={`xl:hidden flex flex-row justify-center items-center fixed bottom-0 left-0 w-full bg-${theme.palette.nav1.background}`}>
+    <div className='xl:hidden flex flex-row justify-center items-center fixed bottom-0 left-0 w-full' style={{backgroundColor: `${theme.palette.navbg}`}}>
     <ul className="flex justify-center items-center py-2">
        {mob_social_links.map(({ id, child, link_name, href, download, style }) => (
         <li key={id} className="px-4 py-2 mx-2 bg-white rounded-md flex flex-col justify-center items-center w-16">

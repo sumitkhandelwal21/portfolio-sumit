@@ -9,6 +9,7 @@ import node from '../assets/skills/node.png';
 import nest from '../assets/skills/nestjs.png';
 import mongo from '../assets/skills/mongo.png';
 import github from '../assets/skills/github.png';
+import github2 from '../assets/skills/github2.png';
 import mysql from '../assets/skills/mysql.png';
 import tailwind from '../assets/skills/tailwind.png';
 import { useTheme } from '@mui/material/styles';
@@ -22,12 +23,12 @@ const Skills = () => {
     {id: 2, src: css, title: 'CSS', style:'shadow-blue-500'},
     {id: 3, src: javascript, title: 'JavaScript', style:'shadow-yellow-500'},
     {id: 4, src: typescript, title: 'TypeScript', style:'shadow-sky-800'},
-    {id: 5, src: nextjs, title: 'Next Js', style:`shadow-${theme.palette.text.primary}`},
+    {id: 5, src: nextjs, title: 'Next Js', style:'shadow-gray-400'},
     {id: 6, src: reactImage, title: 'React Js', style:'shadow-sky-400'},
     {id: 7, src: node, title: 'Node Js', style:'shadow-green-500'},
     {id: 8, src: nest, title: 'Nest Js', style:'shadow-pink-700'},
     {id: 9, src: mongo, title: 'MongoDB', style:'shadow-green-800'},
-    {id: 10, src: github, title: 'GitHub', style:'shadow-gray-400'},
+    {id: 10, src: theme.palette.mode==='dark' ? github : github2, title: 'GitHub', style:'shadow-gray-600'},
     {id: 11, src: mysql, title: 'MySQL', style:'shadow-blue-500'},
     {id: 12, src: tailwind, title: 'Tailwind', style:'shadow-green-300'},
     
