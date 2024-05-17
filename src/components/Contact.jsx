@@ -1,8 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { useTheme } from '@mui/material/styles';
 
 const Contact = () => {
+
+  const theme = useTheme();
+
   return (
-    <div name="contact" className='w-full h-fit bg-gradient-to-b from-gray-800 to-black text-white pb-24'>
+    <div name="contact" className={`w-full h-fit bg-${theme.palette.background.default2} text-${theme.palette.text.primary} pb-24`}>
         <div className='flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full'>
             <div className='pb-8 mt-16'>
                 <p className='text-4xl font-bold inline border-b-4 border-gray-600'>Contact</p>
