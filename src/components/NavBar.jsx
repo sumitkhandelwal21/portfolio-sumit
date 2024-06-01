@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import { FaAffiliatetheme } from "react-icons/fa6";
+import { MdDarkMode } from "react-icons/md";
+import { MdOutlineLightMode } from "react-icons/md";
 import { Link } from 'react-scroll';
 import portfolio from '../assets/portfolio.png';
 import { useTheme } from '@mui/material/styles';
@@ -27,7 +28,10 @@ const NavBar = ({setIsDarkMode}) => {
             <h1 className='text-3xl md:text-4xl font-signature ml-2 mb-2' style={{color:'#FF8C00'}}>PortFolio</h1>
         </div>
         <ul className='hidden md:flex justify-center items-center'>
-            <FaAffiliatetheme onClick={() => setIsDarkMode((prevMode) => !prevMode)} className='cursor-pointer hover:scale-125 duration-200'/>
+            { theme.palette.mode === 'light' ? 
+                <MdDarkMode size={22} onClick={() => setIsDarkMode((prevMode) => !prevMode)} className='cursor-pointer hover:scale-125 duration-200'/>
+                : <MdOutlineLightMode size={22} onClick={() => setIsDarkMode((prevMode) => !prevMode)} className='cursor-pointer hover:scale-125 duration-200'/>
+            }
             &nbsp; &nbsp; &nbsp;
             {links.map(({id, link}) => (
             <li key={id} className='px-4 cursor-pointer capitalize font-medium hover:scale-105 hover:text-orange-500 duration-200'>
@@ -36,7 +40,11 @@ const NavBar = ({setIsDarkMode}) => {
             ))}
         </ul>
         <div className='flex justify-center items-center md:hidden'>
-        {!nav ?  <FaAffiliatetheme onClick={() => setIsDarkMode((prevMode) => !prevMode)} className='cursor-pointer mr-6' size={20}/>: null}
+        {!nav ? 
+            theme.palette.mode === 'light' ?
+                <MdDarkMode size={22} onClick={() => setIsDarkMode((prevMode) => !prevMode)} className='cursor-pointer mr-6' />
+                : <MdOutlineLightMode size={22} onClick={() => setIsDarkMode((prevMode) => !prevMode)} className='cursor-pointer mr-6' />
+        : null}
         <div onClick={()=> setNav(!nav)} className={`cursor-pointer pr-4 z-10 text-${theme.palette.text.primary}`}>
             {nav ? <FaTimes size={30}/> : <FaBars size={30}/>}
         </div>

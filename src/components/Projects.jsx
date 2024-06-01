@@ -30,12 +30,12 @@ const Projects = () => {
               {projs.map(({id, src1, src2, web_link, github_link}) => (
                 <div key={id} className='shadow-md shadow-gray-600 rounded-lg'>
                     <div className='flex flex-row w-full'>
-                      <img src={src1} alt="" className='rounded-md duration-200 hover:scale-110 w-3/4 cursor-pointer'/>
-                      <img src={src2} alt="" className='rounded-md duration-200 hover:scale-110 w-1/4 cursor-pointer'/>
+                      <img src={src1} alt="" className='rounded-md duration-200 md:hover:scale-110 w-3/4 cursor-pointer'/>
+                      <img src={src2} alt="" className='rounded-md duration-200 md:hover:scale-110 w-1/4 cursor-pointer'/>
                     </div>
                     <div className='flex items-center justify-center text-center'>
-                        <a href={web_link} target='__blank' className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Demo</a>
-                        <a href={github_link} target='__blank' className='w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Code</a>
+                        <a href={web_link} target='__blank' className='w-1/2 px-6 py-3 m-4 duration-200 md:hover:scale-105'>Demo</a>
+                        <a href={github_link} target='__blank' className='w-1/2 px-6 py-3 m-4 duration-200 md:hover:scale-105'>Code</a>
                     </div>
                 </div>
               ))}

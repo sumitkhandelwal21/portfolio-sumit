@@ -4,6 +4,21 @@ import { FiDownload } from "react-icons/fi";
 import { useTheme } from '@mui/material/styles';
 
 const Home = () => {
+  
+    const yearsBetween = (startDate) => {
+      const start = new Date(startDate);
+      const now = new Date();
+
+      const diffInMilliseconds = now - start;
+      
+      const millisecondsPerYear = 1000 * 60 * 60 * 24 * 365.25;
+      const diffInYears = diffInMilliseconds / millisecondsPerYear;
+
+      return diffInYears;
+  }
+
+  const startingDate = "2023-01-18"; // YYYY-MM-DD format
+  const exp_years = yearsBetween(startingDate).toFixed(1);
 
   const theme = useTheme();
   
@@ -14,17 +29,17 @@ const Home = () => {
         <div className='flex flex-col justify-center h-full mt-24 md:mt-8'>
           <p className='text-4xl font-hello text-blue-500 mb-2'>Hello !!!</p>
           <p className={`text-4xl sm:text-7xl font-namefont text-${theme.palette.text.primary}`}>I'm Sumit Khandelwal</p>
-          <p className='bg-blue-500 text-black w-fit py-1 px-6 mt-6 font-hello text-2xl font-extrabold hover:scale-110 duration-200'>Full Stack Developer</p>
+          <p className='bg-blue-500 text-black w-fit py-1 px-6 mt-6 font-hello text-2xl font-extrabold md:hover:scale-110 duration-200'>Full Stack Developer</p>
           <p className='text-gray-400 py-4 max-w-md my-4'>
-            I have 1.3 years of experience building
+            {`I have ${exp_years} years of experience building
             and designing software.
             Currently, I love to work on Web application
             using technologies like
-            React.js, Next.js, Node.js, MongoDB, MySQl, Tailwind.
+            React.js, Next.js, Node.js, MongoDB, MySQl, Tailwind.`}
           </p>
           <div className='mb-8 md:mb-0'>
            <a href='/Sumit_Resume.pdf' download >
-            <button className='text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-green-800 cursor-pointer hover:scale-110 duration-200' >
+            <button className='text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-green-800 cursor-pointer md:hover:scale-110 duration-200' >
                   Resume 
                   {/* <span className='group-hover:rotate-180 duration-300'> */}
                   <FiDownload size={25} className='ml-2'/>
